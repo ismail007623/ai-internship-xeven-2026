@@ -19,7 +19,7 @@ dist/
 test.ipynb
 test.py
 additional_metrics_test.py
-*.ipynb
+
 
 # Log files
 *.logs
