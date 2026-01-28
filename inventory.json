@@ -1,0 +1,8 @@
+{
+    "1": {
+        "name": "laptop",
+        "price": 2000,
+        "quantity": 2,
+        "category": "electronic"
+    }
+}

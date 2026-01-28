@@ -1,0 +1,26 @@
+{
+    "101": {
+        "name": "ismail",
+        "age": 20,
+        "grade": {
+            "math": 50,
+            "phy": 60
+        }
+    },
+    "105": {
+        "name": "hassan",
+        "age": 25,
+        "grade": {
+            "chem": 80,
+            "phy": 70
+        }
+    },
+    "77": {
+        "name": "isu",
+        "age": 12,
+        "grade": {
+            "chem": 88,
+            "phy": 77
+        }
+    }
+}
