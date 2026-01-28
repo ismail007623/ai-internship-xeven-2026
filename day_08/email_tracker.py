@@ -3,10 +3,13 @@ register_email = set()
 
 def verify_email(email: str):
     """
-    Docstring for verify_email
-    
-    :param email: Description
-    :type email: str
+     Verifies if the given email is in a valid format.
+
+     Args:
+        email (str): The email address to verify.
+
+     Returns:
+        bool: True if the email format is valid, False otherwise.
     """
 
     try :
@@ -29,12 +32,13 @@ def verify_email(email: str):
 
 def specific_domain(domain : str) -> set :
     """
-    Docstring for specific_domain
-    
-    :param domain: Description
-    :type domain: str
-    :return: Description
-    :rtype: set
+    Returns a set of emails that belong to the given domain.
+
+    Args:
+        domain (str): The domain to filter emails by.
+
+    Returns:
+        set: Emails matching the specified domain.
     """
 
     return {email for email in register_email if email.endswith('@' + domain)}

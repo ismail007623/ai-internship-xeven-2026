@@ -145,7 +145,7 @@ def inventory_report():
     Generates a report of all products in the inventory.
     Includes product name, category, quantity, and price.
     """
-    
+
     with open("inventory.json" , 'w') as file :
         json.dump(inventory , file , indent=4)
 
@@ -208,7 +208,6 @@ if __name__ == "__main__":
             case _ if choice == 7 :
                 response=low_stock_alert(inventory)
                 print(response)
-
 
             case _ if choice == 8 :
                 print("Successfully exit")

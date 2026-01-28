@@ -121,8 +121,8 @@ def generate_report(students):
     report = []
 
     for student_id , data in students.items():
-        avrg = student_avrg(students , student_id)
-        report.append((student_id , data["name"]) , avrg)
+        avrg = student_avrg(student_id)
+        report.append((student_id , data["name"] , avrg))
 
     report.sort(key = lambda x:x[2] , reverse=True)
 

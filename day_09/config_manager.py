@@ -95,5 +95,6 @@ def update_config(section, key, value):
     config[section][key] = value
 
     save_config(config)
+    
     return config
 
