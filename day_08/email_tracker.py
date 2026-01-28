@@ -46,7 +46,7 @@ print(verify_email('hassan@yahoo.com'))
 print(verify_email('ali@gmail.com'))
 print(verify_email('ismail@hotmail.com'))
 
-specific_domain_user = specific_domain('gmail.com')
+specific_domain_user = specific_domain('yahoo.com')
 
 print(specific_domain_user)
 

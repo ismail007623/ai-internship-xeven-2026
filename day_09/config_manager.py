@@ -97,21 +97,3 @@ def update_config(section, key, value):
     save_config(config)
     return config
 
-
-
-config = load_config()
-print(config)
-
-db_host = config.get("database", {}).get("host", "localhost")
-
-rate_limit = config.get("features", {}).get("rate_limit", 100)
-
-print(db_host)
-print(rate_limit)
-
-
-db_name = get_config_value(config, "database", "name", "default_db")
-openai_key = get_config_value(config, "api_keys", "openai", "")
-
-print(db_name)
-print(openai_key)

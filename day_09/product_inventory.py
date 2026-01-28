@@ -5,10 +5,19 @@ inventory = {}
 
 def add_product(inventory ,product_id: int , name: str , price: int , quantity: int , category: str):
     """
-    Docstring for add_product
+    Add a new product to the inventory.
     Args:
+        inventory (dict): Inventory dictionary
+        product_id (int): Unique product ID
+        name (str): Product name
+        price (float): Product price
+        quantity (int): Stock quantity
+        category (str): Product category
 
+    Returns:
+        str: Confirmation message
     """
+
     if product_id in inventory :
         return f"This prouct Id already exists"
 
@@ -22,9 +31,18 @@ def add_product(inventory ,product_id: int , name: str , price: int , quantity: 
 
 def update_stock(inventory , product_id , new_quantity: int):
     """
-    Docstring for update_stock
+    Update the stock quantity of a product in the inventory.
+
     Args:
+        inventory (dict): The inventory dictionary containing products.
+        product_id (int): The ID of the product whose stock is to be updated.
+        new_quantity (int): The new stock quantity to set for the product.
+
+    Returns:
+        str: Confirmation message if product exists, 
+        or an error message if the product ID is not found.
     """
+
     if product_id not in inventory:
         return f"This product do not exists"
     
@@ -32,12 +50,19 @@ def update_stock(inventory , product_id , new_quantity: int):
 
     return f"Stock updated successfully new stock : {new_quantity}"
 
+
 def search_by_category(category : str , inventory):
     """
-    Docstring for search_by_category
+    Search for products in the inventory that belong to a specific category.
     Args:
-
+        category (str): The category name to search for.
+        inventory (dict): The inventory dictionary containing products.
+    Returns:
+        list or str: 
+            - A list of product names that belong to the given category if found.
+            - A message string indicating no products found if none match.
     """
+
     product = []
     for product_id in inventory:
         if inventory[product_id]["category"] == category :
@@ -51,8 +76,8 @@ def search_by_category(category : str , inventory):
 
 def low_stock_alert(inventory):
     """
-    Docstring for low_stock_alert
-    
+     Checks inventory for products with low stock (<=5) and returns their details.
+     Returns a list of low-stock products or a message if all stock is sufficient.
     """
 
     stock = []
@@ -70,8 +95,8 @@ def low_stock_alert(inventory):
 
 def total_inventory_value(inventory):
     """
-    Docstring for total_inventory_value
-        
+    Calculates the total value of all products in the inventory.
+    Returns the total amount as a number.
     """
     if not inventory:
         return "Inventory is empty"
@@ -86,8 +111,8 @@ def total_inventory_value(inventory):
 
 def average_product_price(inventory):
     """
-    Docstring for average_product_price
-    
+    Calculates the average price of products for each category in the inventory.
+    Returns a dictionary with category names as keys and average prices as values.
     """
 
     if not inventory:
@@ -117,8 +142,10 @@ def average_product_price(inventory):
 
 def inventory_report():
     """
-    Docstring for inventory_report
+    Generates a report of all products in the inventory.
+    Includes product name, category, quantity, and price.
     """
+    
     with open("inventory.json" , 'w') as file :
         json.dump(inventory , file , indent=4)
 

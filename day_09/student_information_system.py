@@ -13,7 +13,6 @@ def add_student(student_id: int , name: str , age: int , grade) :
         grade: Dictionary of subject-score pairs.
     """
 
-   
     if student_id in students :
         return {f"{student_id} : Already exists"}
         
@@ -39,7 +38,6 @@ def update_grade(new_score: int , student_id: int , subject_name: str):
     Returns:
         Status message indicating result.
     """
-
   
     if student_id not in students :
          return {f"Student not exists"}
@@ -130,7 +128,9 @@ def generate_report(students):
 
     return report
 
+
 if __name__ == "__main__" :
+
 
     students = load_file()
 
