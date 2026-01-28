@@ -76,3 +76,4 @@ uv.lock
 # Ignore configuration files with secrets
 config.json
 
+config.json
