@@ -72,3 +72,7 @@ uv.lock
 
 
 .python-version
+
+# Ignore configuration files with secrets
+config.json
+
